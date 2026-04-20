@@ -19,8 +19,8 @@ A smart poultry farm monitoring and automation system built using **HTML, CSS, a
 ## 🛠️ Tech Stack
 
 * **Frontend:** HTML, CSS, JavaScript
-* **Backend (Planned):** Flask
-* **Database (Planned):** Firebase
+* **Backend :** Flask
+* **Database :** Firebase
 * **IoT:** Arduino + Sensors (DHT11, Gas Sensor, Motion Sensor)
 
 ---
@@ -38,7 +38,7 @@ A smart poultry farm monitoring and automation system built using **HTML, CSS, a
 
 ## 📸 Screenshots
 
-(Add your project screenshots here)
+()
 
 ---
 
