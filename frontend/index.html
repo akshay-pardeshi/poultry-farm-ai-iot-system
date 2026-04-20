@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Poultry Farm Monitoring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For graphs -->
+    <style>
+        /* Dark mode styles */
+        body.dark {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark .card {
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌾 Poultry Farm Monitoring Dashboard</h1>
+        <p>Real-Time Health & Environmental Tracking</p>
+        <!-- Dark mode toggle -->
+        <button onclick="toggleDarkMode()" style="margin-top: 20px;">🌙 Toggle Dark Mode</button>
+        <p id="color-mode" style="margin-top: 10px; font-weight: 600;">Color Mode: Light</p>
+    </header>
+
+    <div class="dashboard">
+
+        <!-- Sensor Data -->
+        <div class="card">
+            <h2>🌡️ Environmental Conditions</h2>
+            <ul>
+                <li>Temperature: <span id="temp">--</span>°C</li>
+                <li>Humidity: <span id="humid">--</span>%</li>
+                <li>Ammonia (NH₃): <span id="nh3">--</span> ppm</li>
+            </ul>
+        </div>
+
+        <!-- Chicken Status -->
+        <div class="card">
+            <h2>🐔 Chicken Health Status</h2>
+            <ul>
+                <li>Status: <span id="health">--</span></li>
+                <li>Predicted Health (AI): <span id="predicted-health">--</span></li> <!-- ✅ Add this -->
+                <li>Last Prediction Time: <span id="prediction-time">--</span></li> <!-- ✅ Add this -->
+                <li>Disease: <span id="disease">--</span></li>
+                <li>Average Age: <span id="age">--</span> days</li>
+            </ul>
+        </div>
+
+        <!-- Egg Forecast -->
+        <div class="card">
+            <h2>🥚 Egg Production Forecast</h2>
+            <p><strong>Predicted Eggs Tomorrow:</strong> <span id="eggs">--</span></p>
+        </div>
+
+        <!-- Sound Analysis -->
+        <div class="card">
+            <h2>🔊 Sound Analysis</h2>
+            <p>Last Detected Sound: <span id="sound">--</span></p>
+        </div>
+
+        <!-- Alerts Section -->
+        <div class="card alert-card">
+            <h2>⚠️ Alerts</h2>
+            <ul id="alerts">
+                <li>No alerts at the moment.</li>
+            </ul>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="card chart-card">
+            <canvas id="sensorChart"></canvas>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Powered by AI + IoT • LSTM-RF Model</p>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+            const modeText = document.getElementById('color-mode');
+            modeText.innerText = 'Color Mode: ' + (document.body.classList.contains('dark') ? 'Dark' : 'Light');
+        }
+    </script>
+</body>
+
+</html>
