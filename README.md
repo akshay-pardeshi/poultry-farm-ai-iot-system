@@ -8,7 +8,7 @@ A smart poultry farm monitoring and automation system built using **HTML, CSS, a
 
 * 🌡️ Real-time Temperature Monitoring
 * 💧 Humidity Tracking
-* 🧪 Gas Level Detection
+* 🧪 Gas Level Tracking
 * 🐓 Poultry Health Monitoring (AI-based)
 * ⚙️ Automated Fan & Water Control
 * 📊 Live Dashboard UI
